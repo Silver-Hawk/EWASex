@@ -4,7 +4,7 @@
 \alias{getPredictions}
 \title{Computes the errors, normalized errors and performs the sex predictions.}
 \usage{
-getPredictions(genders, df, margin = 2, means = "none")
+getPredictions(genders, df, margin = 2, means = "none", singleSex = FALSE)
 }
 \arguments{
 \item{genders}{Gender information indicating the genders. This can be a vector consiting of 1's and 2's,
@@ -15,6 +15,8 @@ or characters, like, "male" and "female".}
 \item{margin}{Whether to compute the means and SDs column or row-wise. Default is 2, corresponding to one sample per row and a CpG for each column.}
 
 \item{means}{Means and SDs already computed using the \code{getMeansAndSD} function.}
+
+\item{singleSex}{If you expect or know that your dataset would only consists of a single sex (e.g. only females) then change this to TRUE, as normaliztion wouldn't work as expected on a single sex only.}
 }
 \value{
 The means and SDs of \code{df} for each gender in \code{genders}

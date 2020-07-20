@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595252358202.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2842832327",
+    "id" : "E61BCD2C",
+    "lastKnownWriteTime" : 1595252569,
+    "last_content_update" : 1595252569454,
+    "path" : "~/GitHub/EWASex/EWASex/R/PredictionFunctions.R",
+    "project_path" : "R/PredictionFunctions.R",
+    "properties" : {
+        "cursorPosition" : "127,58",
+        "scrollLine" : "100"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
