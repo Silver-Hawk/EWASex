@@ -17,7 +17,7 @@ A list of tutorials and more detailed vignette can be found at:
 
 https://htmlpreview.github.io/?https://github.com/Silver-Hawk/EWASex/blob/master/EWASex/doc/EWASex.html
 
-Or by running `vignette("SexEEst")` from your R terminal after installation.
+Or by running `vignette("EWASex")` from your R terminal after installation.
 
 ## References and citing
 The study hasn’t been published yet, this information will be updated as soon as the manuscript is accepted.
