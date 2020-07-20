@@ -15,7 +15,7 @@ Alternatively, you can install the package directly from the github if you have 
 ## Tutorials
 A list of tutorials and more detailed vignette can be found at:
 
-https://htmlpreview.github.io/?https://github.com/Silver-Hawk/EWASex/blob/master/SexEEst/doc/EWASex.html
+https://htmlpreview.github.io/?https://github.com/Silver-Hawk/EWASex/blob/master/EWASex/doc/EWASex.html
 
 Or by running `vignette("SexEEst")` from your R terminal after installation.
 
