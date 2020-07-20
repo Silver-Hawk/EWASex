@@ -1,11 +1,11 @@
 ---
-title: "SexEEst - The sex discriminating R-package"
+title: "EWASex - The sex discriminating R-package"
 author: "Jesper Beltoft Lund"
 date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{SexEEst}
+  %\VignetteIndexEntry{EWASex}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-`SexEEst` is a light-weight R-package for gender prediction based on methylation profiles sampled with the Illumina Infinum 450K Human BeadChip array.  
+`EWASex` is a light-weight R-package for gender prediction based on methylation profiles sampled with the Illumina Infinum 450K Human BeadChip array.  
 
 The package contains a main function `getPredictions`, that performs the whole set of analysis needed to perform the predictions. Additionally, more information is availabe by running the following commands after instalation: 
 
@@ -34,7 +34,7 @@ Data for means and standard deviation is available by running (which is used in 
 
 ## Tutorials
 
-After installing the `SexEEst` (see the github page for information about this), use the following code to predict and plot the results of the typical workflow.
+After installing the `EWASex` (see the github page for information about this), use the following code to predict and plot the results of the typical workflow.
 
 Prior to this step, you should have a data.frame with normalized beta.values, see the `minfi` R-package for help on how to do this is if you have RAW data.
 
@@ -42,7 +42,7 @@ Prior to this step, you should have a data.frame with normalized beta.values, se
 
 Use this if you have a dataset which contains gender labels.
 
-    library("SexEEst") # load the library
+    library("EWASex") # load the library
     
     sex <- pheno$sex  # the vector containing your gender information
     df <- beta.values # change this to your data.frame or matrix, containing your beta values
@@ -99,7 +99,7 @@ knitr::include_graphics("PredictionPlot1024_1.png")
 
 Use this if you have a dataset which contains gender labels (in which you are sure about the labels) and want to apply the information learning to another dataset.
 
-    library("SexEEst") # load the library
+    library("EWASex") # load the library
     
     sex <- pheno$sex  # the vector containing your gender information
     df <- beta.values # change this to your data.frame or matrix, containing your beta values
@@ -123,7 +123,7 @@ After these steps, you can continue with the code from Example 1 to plot the res
 
 Use this if you have a dataset which doesn't contains gender labels or if you are unsure about the correctness of the labels.
 
-    library("SexEEst") # load the library
+    library("EWASex") # load the library
     
     df <- beta.value # change this to your data.frame or matrix, containing your beta values
     
