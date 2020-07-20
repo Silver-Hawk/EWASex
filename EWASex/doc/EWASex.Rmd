@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-`EWASex` is a light-weight R-package for gender prediction based on methylation profiles sampled with the Illumina Infinum 450K Human BeadChip array.  
+`SexEEst` is a light-weight R-package for gender prediction based on methylation profiles sampled with the Illumina Infinum 450K Human BeadChip array.  
 
 The package contains a main function `getPredictions`, that performs the whole set of analysis needed to perform the predictions. Additionally, more information is availabe by running the following commands after instalation: 
 
@@ -34,7 +34,7 @@ Data for means and standard deviation is available by running (which is used in 
 
 ## Tutorials
 
-After installing the `EWASex` (see the github page for information about this), use the following code to predict and plot the results of the typical workflow.
+After installing the `SexEEst` (see the github page for information about this), use the following code to predict and plot the results of the typical workflow.
 
 Prior to this step, you should have a data.frame with normalized beta.values, see the `minfi` R-package for help on how to do this is if you have RAW data.
 
@@ -42,7 +42,7 @@ Prior to this step, you should have a data.frame with normalized beta.values, se
 
 Use this if you have a dataset which contains gender labels.
 
-    library("EWASex") # load the library
+    library("SexEEst") # load the library
     
     sex <- pheno$sex  # the vector containing your gender information
     df <- beta.values # change this to your data.frame or matrix, containing your beta values
