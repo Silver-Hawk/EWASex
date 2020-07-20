@@ -1,0 +1,15 @@
+Package: EWASex
+Type: Package
+Title: EWASex - The sex discriminating R-package
+Version: 0.1.0
+Author: Jesper Beltoft Lund
+Maintainer: The package maintainer <jesper.beltoft.lund@gmail.com>
+Description: A light-weight R-package for predicting genders based on methylation profiles. 
+License: Released under MIT license. 
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+Depends: 
+    R (>= 2.10)
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr

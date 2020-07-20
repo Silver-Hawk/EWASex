@@ -1,8 +1,8 @@
-# SexEEst - The sex discriminating R-package
+# EWASex - The sex discriminating R-package
 A lightweight R-package for sex predictions based on methylation data.
 
 ## Installation
-In order to install the package, download the R-package [SexEEst_0.1.0.zip](https://github.com/Silver-Hawk/SexEEst/blob/master/SexEEst_0.1.0.zip) (click the 'download' button) 
+In order to install the package, download the R-package [EWASex_0.1.0.zip](https://github.com/Silver-Hawk/SexEEst/blob/master/SexEEst_0.1.0.zip) (click the 'download' button) 
 
 After downloading the package. Run the following command from your R CMD or R-studio: 
 

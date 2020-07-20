@@ -1,6 +1,6 @@
-Package: SexEEst
+Package: EWASex
 Type: Package
-Title: SexEEst - The sex discriminating R-package
+Title: EWASex - The sex discriminating R-package
 Version: 0.1.0
 Author: Jesper Beltoft Lund
 Maintainer: The package maintainer <jesper.beltoft.lund@gmail.com>
