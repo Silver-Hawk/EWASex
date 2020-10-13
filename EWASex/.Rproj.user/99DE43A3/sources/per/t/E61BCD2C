@@ -5,15 +5,15 @@
     "dirty" : true,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "1907777622",
     "id" : "E61BCD2C",
     "lastKnownWriteTime" : 1602589647,
-    "last_content_update" : 1602596260569,
+    "last_content_update" : 1602596711242,
     "path" : "~/GitHub/EWASex/EWASex/R/PredictionFunctions.R",
     "project_path" : "R/PredictionFunctions.R",
     "properties" : {
-        "cursorPosition" : "66,5",
-        "scrollLine" : "44"
+        "cursorPosition" : "98,70",
+        "scrollLine" : "89"
     },
     "relative_order" : 1,
     "source_on_save" : false,

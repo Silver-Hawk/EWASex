@@ -121,3 +121,4 @@ EWASex.predict <- function(df, means, margin=2, use_normalized=TRUE) {
     returnFrame$predictedGender <- ifelse(returnFrame$Error1 < returnFrame$Error2, keys_[1], keys_[2])
 
   return (returnFrame)
+}
