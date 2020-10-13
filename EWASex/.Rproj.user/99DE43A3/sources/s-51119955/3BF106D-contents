@@ -32,7 +32,7 @@ Data for means and standard deviation is available by running (which is used in 
 
     data(MeansAndSD49)
 
-## Tutorials
+## Tutorial using GEO dataset
 
 After installing the `EWASex` (see the github page for information about this), use the following code to predict and plot the results of the typical workflow.
 
