@@ -12,12 +12,12 @@ Alternatively, you can install the package directly from the github if you have 
 
     devtools::install_github("Silver-Hawk/EWASex/EWASex")
 
-## Tutorials
-A list of tutorials and more detailed vignette can be found at:
+## Tutorial
+A comprehensive tutorial and more details can be found at:
 
 https://htmlpreview.github.io/?https://github.com/Silver-Hawk/EWASex/blob/master/EWASex/doc/EWASex.html
 
 Or by running `vignette("EWASex")` from your R terminal after installation.
 
 ## References and citing
-The study hasn’t been published yet, this information will be updated as soon as the manuscript is accepted.
+The study hasn’t been published yet.
