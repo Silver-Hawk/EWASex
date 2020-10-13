@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1602519532145.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3BF106D",
+    "lastKnownWriteTime" : 1602596019,
+    "last_content_update" : 1602596019124,
+    "path" : "~/GitHub/EWASex/EWASex/vignettes/EWASex.Rmd",
+    "project_path" : "vignettes/EWASex.Rmd",
+    "properties" : {
+        "cursorPosition" : "131,36",
+        "scrollLine" : "97"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1602588881544.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "656D9758",
+    "lastKnownWriteTime" : 1602596319,
+    "last_content_update" : 1602596319735,
+    "path" : "~/GitHub/EWASex/EWASex/doc/Tutorial.R",
+    "project_path" : "doc/Tutorial.R",
+    "properties" : {
+        "cursorPosition" : "74,0",
+        "scrollLine" : "39"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
