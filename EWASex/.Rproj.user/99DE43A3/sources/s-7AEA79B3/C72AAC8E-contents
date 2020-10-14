@@ -1,0 +1,78 @@
+devtools::install_github("Silver-Hawk/EWASex/EWASex")
+
+#
+# We will use Bioconductor's BiocManager package to install the required packages see: https://www.bioconductor.org/install/
+#
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager", update =F)
+
+# Install GEOquery and minfi
+BiocManager::install("GEOquery", update = F)
+BiocManager::install("minfi", update =F)
+
+# Install these packages if you need to normalize 450K samples
+BiocManager::install("IlluminaHumanMethylation450kmanifest", update =F)
+BiocManager::install("IlluminaHumanMethylation450kanno.ilmn12.hg19", update =F)
+# Install these packages if you need to normalize 850K samples
+BiocManager::install("IlluminaHumanMethylationEPICmanifest", update=F)
+BiocManager::install("IlluminaHumanMethylationEPICanno.ilm10b4.hg19", update =F)
+
+# Use devtools to install EWASex
+devtools::install_github("Silver-Hawk/EWASex/EWASex")
+
+# Load the libraries
+library("GEOquery")
+library("minfi")
+library("EWASex")
+
+# Change the working directory to the directory of your choice
+setwd("C:/Users/Lund/Downloads")
+
+# For this tutorial we will use the smaller GSE68777 blood-based 450K dataset (N=40)
+# The dataset consists of 14 males and 26 females,
+# Of which, 20 were hospitalized with acute mania and 20 are controls
+GEO_ID = "GSE68777"
+
+# download
+supp = GEOquery::getGEOSuppFiles(GEO_ID)
+GSE = getGEO(GEO_ID)
+
+# unzipping
+untar(tarfile = paste0(GEO_ID,"/",GEO_ID,"_RAW.tar"), exdir = GEO_ID)
+idat_files <- list.files(pattern = 'idat.gz', path = GEO_ID)
+for(i in 1:length(idat_files)){
+  gunzip(filename = paste(GEO_ID,idat_files[i],sep="/"), destname = paste(GEO_ID,gsub("[.]gz$", "", idat_files[i]),sep="/"), overwrite = T)
+}
+
+# get annotation file
+anno = pData(GSE[[1]])
+
+# get beta-values without applaying normalization
+RGset <- read.metharray.exp(paste0('./',GEO_ID,'/'), force = T)
+MSet <- preprocessRaw(RGset)
+BetaMatrix <- getBeta(MSet, type = 'Illumina')
+
+#
+# Do prediction using EWASex
+#
+data("MeansAndSD49")
+
+# Use beta matrix
+df <- BetaMatrix
+
+# Subset to only use the 49 best CpGs
+df <- df[rownames(df) %in% EWASex.getGoldCpGNames(),]
+
+# Do prediction
+#preds <- getPredictions(df = df, means = MeansAndSD49, margin = 1)
+preds <- EWASex.predict(df = df, means = EWASex.train(anno$`Sex:ch1`, df), margin = 1)
+
+# Get a vector with names matching those of the EWASex prediction
+sex_col = ifelse(anno$`Sex:ch1` == "Female", "female", "male")
+sex_col = anno$`Sex:ch1`#ifelse(anno$`Sex:ch1` == "Female", "female", "male")
+
+# Get the accuracy/fraction of correct predictions
+accuracy = sum(preds$predictedGender == sex_col) / nrow(anno)
+
+# print the percentage of correctly predicted genders
+print(paste0(accuracy*100, "% of the samples were correctly predicted by EWASex."))

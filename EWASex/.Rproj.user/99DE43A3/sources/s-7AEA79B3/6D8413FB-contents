@@ -1,0 +1,30 @@
+?tapply
+
+MEANs = data.frame(lapply(rownames(df), function(CpG) {
+  tapply(df[CpG,], anno$`Sex:ch1`, mean, simplify = T)
+}))
+names(MEANs) <- rownames(df)
+
+SDs = data.frame(lapply(rownames(df), function(CpG) {
+  tapply(df[CpG,], anno$`Sex:ch1`, sd, simplify = T)
+}))
+names(SDs) <- rownames(df)
+
+keys_ = unique(anno$`Sex:ch1`)
+df_ = list()
+df_[[keys_[1]]] = list(mean=unlist(MEANs[keys_[1],]), sd=unlist(SDs[keys_[1],]))
+df_[[keys_[2]]] = list(mean=unlist(MEANs[keys_[2],]), sd=unlist(SDs[keys_[2],]))
+
+df_[[keys_[1]]][['mean']]
+
+E1 <- data.frame(gender=keys_[1], cpg=rownames(df), mean=df_[[keys_[1]]][['mean']], sd=df_[[keys_[1]]][['sd']])
+E1_orig <- data.frame(gender=keys_[1], cpg=rownames(df), mean=MeansAndSD49[['female']][['mean']], sd=MeansAndSD49[['male']][['sd']])
+data.frame(gender=keys_[1], cpg=colnames(df), mean=[[keys_[1]]][['mean']], sd=means[[keys_[1]]][['sd']])
+
+
+ms = EWASex.predict(anno$`Sex:ch1`, df)
+
+preds <- getPredictions(df = df, means = ms, margin = 1)
+
+
+
