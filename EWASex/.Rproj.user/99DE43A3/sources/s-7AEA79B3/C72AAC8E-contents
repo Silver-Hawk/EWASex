@@ -52,6 +52,7 @@ RGset <- read.metharray.exp(paste0('./',GEO_ID,'/'), force = T)
 MSet <- preprocessRaw(RGset)
 BetaMatrix <- getBeta(MSet, type = 'Illumina')
 
+
 #
 # Do prediction using EWASex
 #
@@ -64,12 +65,10 @@ df <- BetaMatrix
 df <- df[rownames(df) %in% EWASex.getGoldCpGNames(),]
 
 # Do prediction
-#preds <- getPredictions(df = df, means = MeansAndSD49, margin = 1)
-preds <- EWASex.predict(df = df, means = EWASex.train(anno$`Sex:ch1`, df), margin = 1)
+preds <- EWASex.predict(df = df, means = MeansAndSD49, margin = 1)
 
-# Get a vector with names matching those of the EWASex prediction
+# Get a vector with names matching those of the EWASex prediction with supplied weights
 sex_col = ifelse(anno$`Sex:ch1` == "Female", "female", "male")
-sex_col = anno$`Sex:ch1`#ifelse(anno$`Sex:ch1` == "Female", "female", "male")
 
 # Get the accuracy/fraction of correct predictions
 accuracy = sum(preds$predictedGender == sex_col) / nrow(anno)

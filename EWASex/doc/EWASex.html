@@ -119,7 +119,7 @@ df &lt;- BetaMatrix
 df &lt;- df[rownames(df) %in% EWASex.getGoldCpGNames(),]
 
 # Do prediction
-preds &lt;- EWASex.predict(df = df, means = EWASex.train(anno$`Sex:ch1`, df), margin = 1)
+preds &lt;- EWASex.predict(df = df, means = MeansAndSD49, margin = 1)
 
 # Get a vector with names matching those of the EWASex prediction with supplied weights
 sex_col = ifelse(anno$`Sex:ch1` == &quot;Female&quot;, &quot;female&quot;, &quot;male&quot;)

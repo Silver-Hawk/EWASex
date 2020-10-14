@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "3BF106D",
-    "lastKnownWriteTime" : 1602674371,
-    "last_content_update" : 1602674371757,
+    "lastKnownWriteTime" : 1602675156,
+    "last_content_update" : 1602675156707,
     "path" : "~/GitHub/EWASex/EWASex/vignettes/EWASex.Rmd",
     "project_path" : "vignettes/EWASex.Rmd",
     "properties" : {
-        "cursorPosition" : "108,91",
-        "scrollLine" : "94"
+        "cursorPosition" : "117,168",
+        "scrollLine" : "95"
     },
     "relative_order" : 7,
     "source_on_save" : false,
